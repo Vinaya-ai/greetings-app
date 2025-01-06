@@ -41,3 +41,48 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.flower {
+    width: 40px;
+    height: 40px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+}
+
+.flower:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.flower:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+}
