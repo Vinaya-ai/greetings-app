@@ -1,3 +1,8 @@
+function generateGreeting() {
+    const userName = document.getElementById('userName').value;
+    const greeting = getGreetingMessage(userName);
+    document.getElementById('greeting').innerText = greeting;
+}
 function getGreetingMessage(userName) {
     const today = new Date();
     const hour = today.getHours();
