@@ -2,6 +2,26 @@ function generateGreeting() {
     const userName = document.getElementById('userName').value;
     const greeting = getGreetingMessage(userName);
     document.getElementById('greeting').innerText = greeting;
+    // Function to handle form submission when the Submit button is clicked or Enter key is pressed
+function submitName(event) {
+    event.preventDefault(); // Prevent the form from reloading the page
+
+    const name = document.getElementById('name-input').value; // Get the input value
+    if (name) {
+        alert(`Hello, ${name}! Welcome to the app!`); // Greet the user
+        // You can update the greeting message here if needed
+    } else {
+        alert("Please enter your name.");
+    }
+}
+
+// Add an event listener to the input to listen for the Enter key
+document.getElementById('name-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('name-form').submit(); // Submit the form when Enter is pressed
+    }
+});
+
 }
 function getGreetingMessage(userName) {
     const today = new Date();
