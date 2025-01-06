@@ -3,6 +3,10 @@ function generateGreeting() {
     const userName = document.getElementById('userName').value;
     const greeting = getGreetingMessage(userName);
     document.getElementById('greeting').innerText = greeting;
+
+    // Hide the input field and submit button after greeting is shown
+    document.getElementById('userName').style.display = 'none'; // Hides the input field
+    document.querySelector('button').style.display = 'none'; // Hides the submit button
 }
 
 // Function to handle form submission when the Submit button is clicked or Enter key is pressed
