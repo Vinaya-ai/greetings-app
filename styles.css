@@ -86,3 +86,16 @@ button:hover {
     border-radius: 50%;
     animation: float 3s ease-in-out infinite;
 }
+#flower-container {
+    opacity: 0; /* Initially invisible */
+    animation: fadeIn 2s forwards; /* Fade in effect over 2 seconds */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* Behind other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
